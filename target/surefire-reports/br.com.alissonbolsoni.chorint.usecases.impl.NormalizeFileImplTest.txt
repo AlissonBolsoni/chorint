@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: br.com.alissonbolsoni.chorint.usecases.impl.NormalizeFileImplTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.424 s - in br.com.alissonbolsoni.chorint.usecases.impl.NormalizeFileImplTest

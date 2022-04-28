@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>FileConverterImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">chorint</a> &gt; <a href="index.source.html" class="el_package">br.com.alissonbolsoni.chorint.services.impl</a> &gt; <span class="el_source">FileConverterImpl.java</span></div><h1>FileConverterImpl.java</h1><pre class="source lang-java linenums">package br.com.alissonbolsoni.chorint.services.impl;
+
+import static java.util.Objects.isNull;
+
+import br.com.alissonbolsoni.chorint.domains.entity.Order;
+import br.com.alissonbolsoni.chorint.domains.entity.Product;
+import br.com.alissonbolsoni.chorint.domains.entity.UserOrder;
+import br.com.alissonbolsoni.chorint.services.FileConverter;
+import br.com.alissonbolsoni.chorint.utils.Log;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
+
+<span class="fc" id="L20">@RequiredArgsConstructor</span>
+public class FileConverterImpl implements FileConverter {
+
+  private static final String DATE_FORMAT = &quot;yyyyMMdd&quot;;
+  private static final String CONCAT_CHAR = &quot;-&quot;;
+<span class="fc" id="L25">  private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);</span>
+
+  private final Log log;
+
+  @Override
+  public List&lt;UserOrder&gt; convert(List&lt;String&gt; lines) {
+
+<span class="fc bfc" id="L32" title="All 4 branches covered.">    if (!lines.isEmpty() &amp;&amp; canConvert(lines.get(0))) {</span>
+
+<span class="fc" id="L34">      final var usersMap = new HashMap&lt;Integer, UserOrder&gt;();</span>
+<span class="fc" id="L35">      final var ordersMap = new HashMap&lt;String, Order&gt;();</span>
+<span class="fc" id="L36">      lines.forEach(</span>
+          line -&gt; {
+<span class="fc" id="L38">            final var userIdStr = line.substring(0, 10);</span>
+<span class="fc" id="L39">            final var userId = Integer.parseInt(userIdStr);</span>
+<span class="fc" id="L40">            final var userName = line.substring(10, 55).trim();</span>
+<span class="fc" id="L41">            final var orderIdStr = line.substring(55, 65);</span>
+<span class="fc" id="L42">            final var orderId = Integer.parseInt(orderIdStr);</span>
+<span class="fc" id="L43">            final var productId = Integer.parseInt(line.substring(65, 75));</span>
+<span class="fc" id="L44">            final var productValue = Double.parseDouble(line.substring(75, 87));</span>
+<span class="fc" id="L45">            final var date = LocalDate.parse(line.substring(87), formatter);</span>
+
+<span class="fc" id="L47">            final var userMap = usersMap.get(userId);</span>
+<span class="fc bfc" id="L48" title="All 2 branches covered.">            if (isNull(userMap)) {</span>
+<span class="fc" id="L49">              usersMap.put(userId, new UserOrder(userId, userName, new ArrayList&lt;&gt;()));</span>
+            }
+
+<span class="fc" id="L52">            final var userOrderId = userIdStr.concat(CONCAT_CHAR).concat(orderIdStr);</span>
+<span class="fc" id="L53">            final var orderMap = ordersMap.get(userOrderId);</span>
+<span class="fc bfc" id="L54" title="All 2 branches covered.">            if (isNull(orderMap)) {</span>
+<span class="fc" id="L55">              final List&lt;Product&gt; products = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L56">              products.add(new Product(productId, productValue));</span>
+<span class="fc" id="L57">              final var order = new Order(orderId, productValue, date, products);</span>
+<span class="fc" id="L58">              ordersMap.put(userOrderId, order);</span>
+<span class="fc" id="L59">            } else {</span>
+<span class="fc" id="L60">              orderMap.increaseTotal(productValue);</span>
+<span class="fc" id="L61">              orderMap.getProducts().add(new Product(productId, productValue));</span>
+            }
+<span class="fc" id="L63">          });</span>
+
+<span class="fc" id="L65">      ordersMap.forEach(</span>
+          (k, v) -&gt; {
+<span class="fc" id="L67">            final var userIdMap =</span>
+<span class="fc" id="L68">                Arrays.stream(k.split(CONCAT_CHAR)).collect(Collectors.toList()).get(0);</span>
+
+<span class="fc" id="L70">            final var user = usersMap.get(Integer.parseInt(userIdMap));</span>
+<span class="fc" id="L71">            user.getOrders().add(v);</span>
+<span class="fc" id="L72">          });</span>
+
+<span class="fc" id="L74">      return new ArrayList&lt;&gt;(usersMap.values());</span>
+
+    } else {
+<span class="fc" id="L77">      log.error(&quot;File is empty&quot;);</span>
+<span class="fc" id="L78">      return Collections.emptyList();</span>
+    }
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

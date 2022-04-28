@@ -1,0 +1,6 @@
+br\com\alissonbolsoni\chorint\services\impl\FileManagerImplTest.class
+br\com\alissonbolsoni\chorint\usecases\impl\NormalizeFileImplTest.class
+br\com\alissonbolsoni\chorint\services\impl\ProcessConvertionImplTest.class
+br\com\alissonbolsoni\chorint\templates\FileConvertedTemplate.class
+br\com\alissonbolsoni\chorint\templates\UserOrderTemplate.class
+br\com\alissonbolsoni\chorint\services\impl\FileConverterImplTest.class

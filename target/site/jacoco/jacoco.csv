@@ -1,0 +1,10 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+chorint,br.com.alissonbolsoni.chorint.services.impl,FileConverterImpl,0,195,0,8,0,37,0,8,0,4
+chorint,br.com.alissonbolsoni.chorint.services.impl,FileManagerFactory,0,10,0,0,0,2,0,2,0,2
+chorint,br.com.alissonbolsoni.chorint.services.impl,ProcessConvertionImpl,0,54,0,0,0,13,0,3,0,3
+chorint,br.com.alissonbolsoni.chorint.services.impl,ProcessConvertionFactory,0,14,0,0,0,2,0,2,0,2
+chorint,br.com.alissonbolsoni.chorint.services.impl,FileConverterFactory,0,10,0,0,0,2,0,2,0,2
+chorint,br.com.alissonbolsoni.chorint.services,FileConverter,0,28,0,6,0,4,0,4,0,1
+chorint,br.com.alissonbolsoni.chorint.exceptions,ArgumentNullOrEmptyException,0,4,0,0,0,2,0,1,0,1
+chorint,br.com.alissonbolsoni.chorint.usecases.impl,NormalizeFileImpl,0,138,0,10,0,28,0,8,0,3
+chorint,br.com.alissonbolsoni.chorint.usecases.impl,NormalizeFileFactory,0,21,0,0,0,4,0,2,0,2

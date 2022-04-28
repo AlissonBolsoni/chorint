@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="br.com.alissonbolsoni.chorint.services.impl.FileManagerImplTest" time="0.007" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\alissonLabs\Documents\repository\java\chorint\target\test-classes;C:\Users\alissonLabs\Documents\repository\java\chorint\target\classes;C:\Users\alissonLabs\.m2\repository\org\projectlombok\lombok\1.18.22\lombok-1.18.22.jar;C:\Users\alissonLabs\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\alissonLabs\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.2.2\jackson-databind-2.13.2.2.jar;C:\Users\alissonLabs\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.2\jackson-annotations-2.13.2.jar;C:\Users\alissonLabs\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.2\jackson-core-2.13.2.jar;C:\Users\alissonLabs\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\alissonLabs\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\alissonLabs\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\alissonLabs\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\alissonLabs\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\alissonLabs\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\alissonLabs\.m2\repository\org\mockito\mockito-junit-jupiter\4.4.0\mockito-junit-jupiter-4.4.0.jar;C:\Users\alissonLabs\.m2\repository\org\mockito\mockito-core\4.4.0\mockito-core-4.4.0.jar;C:\Users\alissonLabs\.m2\repository\net\bytebuddy\byte-buddy\1.12.8\byte-buddy-1.12.8.jar;C:\Users\alissonLabs\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.8\byte-buddy-agent-1.12.8.jar;C:\Users\alissonLabs\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\alissonLabs\.m2\repository\org\mockito\mockito-inline\4.4.0\mockito-inline-4.4.0.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="user.country.format" value="BR"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Users\alissonLabs\.jdks\temurin-11.0.13\bin"/>
+    <property name="sun.java.command" value="C:\Users\ALISSO~1\AppData\Local\Temp\surefire3271148001997939479\surefirebooter14863768784501428213.jar C:\Users\alissonLabs\AppData\Local\Temp\surefire3271148001997939479 2022-04-25T08-42-43_936-jvmRun1 surefire14120873177886984050tmp surefire_04287837124130512803tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\alissonLabs\Documents\repository\java\chorint\target\test-classes;C:\Users\alissonLabs\Documents\repository\java\chorint\target\classes;C:\Users\alissonLabs\.m2\repository\org\projectlombok\lombok\1.18.22\lombok-1.18.22.jar;C:\Users\alissonLabs\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\alissonLabs\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.13.2.2\jackson-databind-2.13.2.2.jar;C:\Users\alissonLabs\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.13.2\jackson-annotations-2.13.2.jar;C:\Users\alissonLabs\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.13.2\jackson-core-2.13.2.jar;C:\Users\alissonLabs\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.2\junit-jupiter-engine-5.8.2.jar;C:\Users\alissonLabs\.m2\repository\org\junit\platform\junit-platform-engine\1.8.2\junit-platform-engine-1.8.2.jar;C:\Users\alissonLabs\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\alissonLabs\.m2\repository\org\junit\platform\junit-platform-commons\1.8.2\junit-platform-commons-1.8.2.jar;C:\Users\alissonLabs\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.2\junit-jupiter-api-5.8.2.jar;C:\Users\alissonLabs\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\alissonLabs\.m2\repository\org\mockito\mockito-junit-jupiter\4.4.0\mockito-junit-jupiter-4.4.0.jar;C:\Users\alissonLabs\.m2\repository\org\mockito\mockito-core\4.4.0\mockito-core-4.4.0.jar;C:\Users\alissonLabs\.m2\repository\net\bytebuddy\byte-buddy\1.12.8\byte-buddy-1.12.8.jar;C:\Users\alissonLabs\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.8\byte-buddy-agent-1.12.8.jar;C:\Users\alissonLabs\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\alissonLabs\.m2\repository\org\mockito\mockito-inline\4.4.0\mockito-inline-4.4.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\alissonLabs"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-10-19"/>
+    <property name="java.home" value="C:\Users\alissonLabs\.jdks\temurin-11.0.13"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\alissonLabs\Documents\repository\java\chorint"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\ALISSO~1\AppData\Local\Temp\surefire3271148001997939479\surefirebooter14863768784501428213.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.13+8"/>
+    <property name="user.name" value="alissonLabs"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-11.0.13+8"/>
+    <property name="localRepository" value="C:\Users\alissonLabs\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\ALISSO~1\AppData\Local\Temp\"/>
+    <property name="java.version" value="11.0.13"/>
+    <property name="user.dir" value="C:\Users\alissonLabs\Documents\repository\java\chorint"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="user.language.format" value="pt"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Users\alissonLabs\.jdks\temurin-11.0.13\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\alissonLabs\.jdks\temurin-11.0.13\bin;C:\Users\alissonLabs\Documents\maven\\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Users\alissonLabs\Documents\AlissonDocuments\argo;C:\Program Files\Git\cmd;C:\Users\alissonLabs\AppData\Local\Microsoft\WindowsApps;C:\Users\alissonLabs\AppData\Local\Programs\Git\cmd;C:\Users\alissonLabs\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="11.0.13+8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="try_factory_class" classname="br.com.alissonbolsoni.chorint.services.impl.FileManagerImplTest" time="0"/>
+</testsuite>
